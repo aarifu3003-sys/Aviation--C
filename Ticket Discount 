@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void dis(int age)
+{
+    printf("\nThis discount for  independence day");
+    if(age<=15)
+    printf("\nTicket free for age < 10");
+    else if(age>15&&age<=45)
+    printf("\nNo Ticket discount for age 15-25");
+    else if(age>45&&age<=65)
+    printf("\nTicket price discount 40%% for age 45-65");
+    else if(age>65&&age<=80)
+    printf("\nTicket price discount 50%% for age 65-80");
+}
+
+int main()
+{
+    printf("welcome to Indigo");
+    dis(12);
+    dis(50);
+    dis(70);
+
+    return 0;
+}
