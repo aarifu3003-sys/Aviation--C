@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+
+
+struct passenger {
+    char name[50];
+    int seatno;
+    int weight;
+};
+
+int main() {
+    struct passenger p[3];
+    int i;
+
+    // Input Loop
+    for(i = 0; i < 3; i++) {
+        printf("name: ");
+        scanf("%s", p[i].name);
+        
+        printf("seatno: ");
+        scanf("%d", &p[i].seatno);
+        
+        printf("weight: ");
+        scanf("%d", &p[i].weight);
+    }
+
+    // Output Check Loop (Index fixed to 0 to <3)
+    for(i = 0; i < 3; i++) {
+        if(p[i].weight <= 15) {
+            printf("Passenger %d (%s): No extra fee\n", i + 1, p[i].name);
+        } else {
+            printf("Passenger %d (%s): Extra fee required!\n", i + 1, p[i].name);
+        }
+    
+
+    return 0;
+}
