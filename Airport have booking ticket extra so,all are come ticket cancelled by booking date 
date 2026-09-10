@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+
+{
+    printf("Flight takeoff date 1.11.26");
+    /**int n;
+    printf("\nN: ");
+    scanf("%d",&n);**/
+   float pas[2];
+   int i;
+   
+   for(i=0;i<2;i++)
+   {
+       printf("\nBockkingdate: ");
+       scanf("%f",&pas[i]);
+   }
+   for(i=0;i<2;i++)
+   {
+       if(pas[i]<=22.10)
+       printf("\nno cancellation for %d  %f",i+1,pas[i]);
+       else
+       {
+           if(pas[i]<=26.10)
+           printf("\n processed cancel ticket for %d  %f",i+1,pas[i]);
+           
+           else
+           printf("\n cancelled ticket %d %f",i+1,pas[i]);
+       }
+       
+   }
+   
+   
+    
+    
+
+    return 0;
+}
