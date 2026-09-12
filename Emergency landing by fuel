@@ -1,0 +1,37 @@
+#include <stdio.h>
+struct emergency{
+    int code;
+    float fuel;
+    
+};
+
+int main()
+{
+    int n,i;
+    printf("n: ");
+    scanf("%d",&n);
+    
+    struct emergency p[n];
+    
+    for(i=0;i<n;i++){
+        printf("code: ");
+        scanf("%d",&p[i].code);
+        printf("fuel: ");
+        scanf("%f",&p[i].fuel);
+        
+    }
+    for(i=0;i<n;i++){
+        if(p[i].fuel<=20)
+        printf("\nflight %d has emergency landing because of fuel<20%\n",p[i].code);
+        
+        else
+        printf("\nflight %d has no emergency so, landing by regular time",p[i].code);
+    }
+    
+    
+    
+    
+    
+
+    return 0;
+}
